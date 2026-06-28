@@ -1,129 +1,233 @@
 # SyncPulse 
 
-A production-inspired backend project built with **Django** and **Django REST Framework** to simulate a real-time team productivity platform.
+A production-inspired backend platform built with **Django** and **Django REST Framework** that simulates a real-time team productivity and collaboration system.
 
-The goal of this project is to learn and implement production-level backend concepts including authentication, multi-tenancy, real-time communication, background jobs, AI integration, caching, testing, Docker, and deployment.
+SyncPulse is designed to mimic how modern SaaS platforms like **Jira**, **ClickUp**, **Asana**, and **Monday.com** manage organizations, projects, tasks, notifications, and real-time collaboration.
 
-> **Project Status:**  Under Development
+The objective of this project is to gain hands-on experience with production-ready backend development by implementing authentication, multi-tenancy, REST APIs, real-time communication, background processing, AI integration, testing, and deployment.
 
----
-
-## Tech Stack
-
-- Python 3.11+
-- Django 5
-- Django REST Framework
-- PostgreSQL
-- python-dotenv
-- Git & GitHub
+> **Project Status:**  Under Active Development
 
 ---
 
-## Current Progress
+# Tech Stack
 
-###  Project Initialization
+### Backend
 
-- Django project setup
-- Modular app architecture
-- Environment configuration using `.env`
-- PostgreSQL integration
-- GitHub repository initialized
+ Python 3.11+
+ Django 5
+ Django REST Framework
 
-###  Authentication Foundation
+### Database
 
-- Custom User Model using `AbstractUser`
-- Configured `AUTH_USER_MODEL`
-- Initial database migrations
+ PostgreSQL
+
+### Environment Management
+
+ python-dotenv
+
+### Version Control
+
+ Git
+ GitHub
 
 ---
 
-## Project Structure
+# Current Progress
 
-```
+##  Project Foundation
+
+ Django project initialized
+ Modular app architecture
+ PostgreSQL configured
+ Environment variable configuration using `.env`
+ Requirements management
+ Project documentation
+
+---
+
+##  Authentication Foundation
+
+ Custom User Model using `AbstractUser`
+ UUID-based primary keys
+ Shared `BaseModel`
+ Email-based authentication configuration
+ Django Admin integration
+
+---
+
+##  Multi-Tenant Organization Module
+
+- Organization model
+- Automatic slug generation
+- Organization ownership
+- Organization Member model
+- Role-based membership
+
+  - Admin
+  - Manager
+  - Member
+- Membership constraints to prevent duplicate users in an organization
+
+---
+
+# Project Structure
+
+```text
 syncpulse/
-│
-├── accounts/          # Authentication & User Management
-├── organizations/     # Multi-tenant organizations
+
+├── accounts/          # Custom User & Authentication
+├── organizations/     # Organizations & Memberships
 ├── boards/            # Projects, Sprints & Tasks
-├── notifications/     # User notifications
-├── jobs/              # Celery background jobs
-├── integrations/      # GitHub & third-party integrations
+├── notifications/     # Notification Service
+├── jobs/              # Celery Background Jobs
+├── integrations/      # GitHub & Third-party Integrations
 ├── ai/                # AI Sprint Coach
-├── common/            # Shared utilities and base models
-│
+├── common/            # Shared Base Models & Utilities
+
 ├── syncpulse/
 │   ├── settings.py
 │   ├── urls.py
 │   ├── asgi.py
 │   └── wsgi.py
-│
-├── manage.py
+
 ├── requirements.txt
 ├── README.md
+├── manage.py
 └── .env.example
 ```
 
 ---
 
-## Learning Objectives
+# Database Design (Current)
 
-This project is being built to gain hands-on experience with:
+```text
+User
+ │
+ │ owns
+ ▼
+Organization
+ │
+ │
+ ▼
+OrganizationMember
+```
 
-- Django REST Framework
-- JWT Authentication
-- Role-Based Authorization
-- PostgreSQL
-- Django Channels (WebSockets)
-- Redis
-- Celery
-- Docker
-- AI Integration (Gemini API)
-- GitHub Webhooks
-- CI/CD
-- Testing with Pytest
-
----
-
-## Development Roadmap
-
-- [x] Initialize Django project
-- [x] Configure PostgreSQL
-- [x] Create Custom User Model
-- [ ] Organization & Membership System
-- [ ] JWT Authentication
-- [ ] Role-Based Permissions
-- [ ] Project & Sprint APIs
-- [ ] Task Management APIs
-- [ ] Nested Serializers
-- [ ] Filtering & Pagination
-- [ ] WebSocket Integration
-- [ ] Redis
-- [ ] Celery
-- [ ] AI Sprint Coach
-- [ ] GitHub Webhooks
-- [ ] Notifications
-- [ ] Docker
-- [ ] Testing
-- [ ] Deployment
+The application follows a **multi-tenant architecture**, where each organization maintains its own members, projects, and resources independently.
 
 ---
 
-## Getting Started
+# Learning Objectives
 
-### Clone the repository
+This project is being built to gain practical experience with:
+
+* Django REST Framework
+* JWT Authentication
+* Role-Based Authorization
+* PostgreSQL
+* Django Channels (WebSockets)
+* Redis
+* Celery
+* Docker
+* AI Integration (Gemini API)
+* GitHub Webhooks
+* Performance Optimization
+* Testing with Pytest
+* CI/CD Pipelines
+
+---
+
+# Development Roadmap
+
+## Foundation
+
+* [x] Initialize Django Project
+* [x] Configure PostgreSQL
+* [x] Configure Environment Variables
+* [x] Create Shared BaseModel
+* [x] Create Custom User Model
+
+## Organization Module
+
+* [x] Organization Model
+* [x] Organization Membership
+* [x] Role Management
+
+## Authentication
+
+* [ ] JWT Authentication
+* [ ] Login API
+* [ ] Registration API
+* [ ] Refresh Tokens
+* [ ] Logout
+
+## Project Management
+
+* [ ] Project APIs
+* [ ] Sprint APIs
+* [ ] Task APIs
+* [ ] Labels
+* [ ] Comments
+* [ ] Attachments
+
+## API Features
+
+* [ ] Nested Serializers
+* [ ] Filtering
+* [ ] Searching
+* [ ] Ordering
+* [ ] Pagination
+
+## Real-Time
+
+* [ ] Django Channels
+* [ ] WebSocket Notifications
+* [ ] Live Task Board
+
+## Background Processing
+
+* [ ] Celery
+* [ ] Celery Beat
+* [ ] Email Notifications
+
+## AI
+
+* [ ] Gemini AI Sprint Coach
+* [ ] AI Stand-up Summary
+
+## Integrations
+
+* [ ] GitHub Webhooks
+* [ ] Activity Logs
+
+## Deployment
+
+* [ ] Docker
+* [ ] GitHub Actions
+* [ ] Railway Deployment
+
+## Testing
+
+* [ ] Unit Testing
+* [ ] API Testing
+* [ ] WebSocket Testing
+
+---
+
+# Getting Started
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/Anjali470/syncpulse.git
 cd syncpulse
 ```
 
-### Create Virtual Environment
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
-
-Activate
 
 Windows
 
@@ -137,15 +241,15 @@ Linux / macOS
 source venv/bin/activate
 ```
 
-### Install dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Configure Environment Variables
+## Configure Environment Variables
 
-Create a `.env` file:
+Create a `.env` file.
 
 ```env
 SECRET_KEY=your_secret_key
@@ -159,14 +263,20 @@ DB_HOST=localhost
 DB_PORT=5432
 ```
 
-### Apply Migrations
+## Apply Migrations
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### Run the Server
+## Create Superuser
+
+```bash
+python manage.py createsuperuser
+```
+
+## Run Development Server
 
 ```bash
 python manage.py runserver
@@ -174,26 +284,26 @@ python manage.py runserver
 
 ---
 
-## Current Milestone
+# Current Milestone
 
-✔ Django project initialized
+ Project Foundation
 
-✔ PostgreSQL configured
+ Authentication Foundation
 
-✔ Custom User Model implemented
-
----
-
-## Upcoming Milestone
-
-Organization & Multi-Tenant Architecture
+ Organization & Membership Module
 
 ---
 
-## Author
+# Upcoming Milestone
+
+ JWT Authentication & User APIs
+
+---
+
+# Author
 
 **Anjali Kummara**
 
 Backend Developer | Python | Django | Django REST Framework
 
-Currently building production-inspired backend systems to strengthen backend engineering skills.
+Currently building production-inspired backend systems while learning scalable backend architecture, real-time communication, distributed systems, AI integrations, and cloud-ready development.
