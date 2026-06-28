@@ -1,10 +1,10 @@
-# SyncPulse 🚀
+# SyncPulse 
 
 A production-inspired backend project built with **Django** and **Django REST Framework** to simulate a real-time team productivity platform.
 
 The goal of this project is to learn and implement production-level backend concepts including authentication, multi-tenancy, real-time communication, background jobs, AI integration, caching, testing, Docker, and deployment.
 
-> **Project Status:** 🚧 Under Development
+> **Project Status:**  Under Development
 
 ---
 
@@ -21,7 +21,7 @@ The goal of this project is to learn and implement production-level backend conc
 
 ## Current Progress
 
-### ✅ Project Initialization
+###  Project Initialization
 
 - Django project setup
 - Modular app architecture
@@ -29,7 +29,7 @@ The goal of this project is to learn and implement production-level backend conc
 - PostgreSQL integration
 - GitHub repository initialized
 
-### ✅ Authentication Foundation
+###  Authentication Foundation
 
 - Custom User Model using `AbstractUser`
 - Configured `AUTH_USER_MODEL`
