@@ -55,6 +55,15 @@ The objective of this project is to gain hands-on experience with production-rea
  Django Admin integration
 
 ---
+ User Registration API
+ Login API using JWT
+ Access Token generation
+ Refresh Token generation
+ SimpleJWT integration
+ DRF authentication configuration
+
+## JWT Authentication
+
 
 ##  Multi-Tenant Organization Module
 
@@ -121,19 +130,19 @@ The application follows a **multi-tenant architecture**, where each organization
 
 This project is being built to gain practical experience with:
 
-* Django REST Framework
-* JWT Authentication
-* Role-Based Authorization
-* PostgreSQL
-* Django Channels (WebSockets)
-* Redis
-* Celery
-* Docker
-* AI Integration (Gemini API)
-* GitHub Webhooks
-* Performance Optimization
-* Testing with Pytest
-* CI/CD Pipelines
+ Django REST Framework
+ JWT Authentication
+ Role-Based Authorization
+ PostgreSQL
+ Django Channels (WebSockets)
+ Redis
+ Celery
+ Docker
+ AI Integration (Gemini API)
+ GitHub Webhooks
+ Performance Optimization
+ Testing with Pytest
+ CI/CD Pipelines
 
 ---
 
@@ -141,76 +150,76 @@ This project is being built to gain practical experience with:
 
 ## Foundation
 
-* [x] Initialize Django Project
-* [x] Configure PostgreSQL
-* [x] Configure Environment Variables
-* [x] Create Shared BaseModel
-* [x] Create Custom User Model
+ [x] Initialize Django Project
+ [x] Configure PostgreSQL
+ [x] Configure Environment Variables
+ [x] Create Shared BaseModel
+ [x] Create Custom User Model
 
 ## Organization Module
 
-* [x] Organization Model
-* [x] Organization Membership
-* [x] Role Management
+ [x] Organization Model
+ [x] Organization Membership
+ [x] Role Management
 
 ## Authentication
 
-* [ ] JWT Authentication
-* [ ] Login API
-* [ ] Registration API
-* [ ] Refresh Tokens
-* [ ] Logout
+ [x] JWT Authentication
+ [x] Login API
+ [ ] Registration API
+ [ ] Refresh Tokens
+ [ ] Logout
 
 ## Project Management
 
-* [ ] Project APIs
-* [ ] Sprint APIs
-* [ ] Task APIs
-* [ ] Labels
-* [ ] Comments
-* [ ] Attachments
+ [ ] Project APIs
+ [ ] Sprint APIs
+ [ ] Task APIs
+ [ ] Labels
+ [ ] Comments
+ [ ] Attachments
 
 ## API Features
 
-* [ ] Nested Serializers
-* [ ] Filtering
-* [ ] Searching
-* [ ] Ordering
-* [ ] Pagination
+ [ ] Nested Serializers
+ [ ] Filtering
+ [ ] Searching
+ [ ] Ordering
+ [ ] Pagination
 
 ## Real-Time
 
-* [ ] Django Channels
-* [ ] WebSocket Notifications
-* [ ] Live Task Board
+ [ ] Django Channels
+ [ ] WebSocket Notifications
+ [ ] Live Task Board
 
 ## Background Processing
 
-* [ ] Celery
-* [ ] Celery Beat
-* [ ] Email Notifications
+ [ ] Celery
+ [ ] Celery Beat
+ [ ] Email Notifications
 
 ## AI
 
-* [ ] Gemini AI Sprint Coach
-* [ ] AI Stand-up Summary
+ [ ] Gemini AI Sprint Coach
+ [ ] AI Stand-up Summary
 
 ## Integrations
 
-* [ ] GitHub Webhooks
-* [ ] Activity Logs
+ [ ] GitHub Webhooks
+ [ ] Activity Logs
 
 ## Deployment
 
-* [ ] Docker
-* [ ] GitHub Actions
-* [ ] Railway Deployment
+ [ ] Docker
+ [ ] GitHub Actions
+ [ ] Railway Deployment
 
 ## Testing
 
-* [ ] Unit Testing
-* [ ] API Testing
-* [ ] WebSocket Testing
+ [ ] Unit Testing
+ [ ] API Testing
+ [ ] WebSocket Testing
 
 ---
 
