@@ -43,10 +43,12 @@ The project is being built step by step while following backend engineering best
 
 ### Authentication
 
+- Custom User Model
 - User Registration API
-- Login API
+- JWT Login API
 - Refresh Token API
 - Current User API
+- JWT Logout with Token Blacklisting
 
 ---
 
