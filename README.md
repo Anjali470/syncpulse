@@ -49,6 +49,7 @@ The project is being built step by step while following backend engineering best
 - Refresh Token API
 - Current User API
 - JWT Logout with Token Blacklisting
+- Password Change API
 
 ---
 
