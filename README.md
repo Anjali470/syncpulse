@@ -51,13 +51,19 @@ The project is being built step by step while following backend engineering best
 - JWT Logout with Token Blacklisting
 - Password Change API
 
+### Organization Module
+
+- Create Organization
+- List Organizations owned by the logged-in user
+- Retrieve Organization details
+- Update Organization
+- Delete Organization
+
 ---
 
 ## Next
 
 - Profile API
-- Password Change
-- Logout
 - Project Management Module
 
 ---
